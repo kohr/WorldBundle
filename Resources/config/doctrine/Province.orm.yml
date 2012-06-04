@@ -1,0 +1,51 @@
+Brickstorm\WorldBundle\Entity\Province:
+  type: entity
+  table: b_world__province
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+    parent_id:
+      type: integer
+      nullable: true
+  oneToMany:
+    children:
+      nullable: true
+      targetEntity: Province
+      mappedBy: parent
+  manyToOne:
+    parent:
+      targetEntity: Province
+      inversedBy: children  
+      joinColumns:
+        parent_id:
+          nullable: true
+          referencedColumnName: id
+    country:
+      targetEntity: Country
+      joinColumns:
+        country_id:
+          nullable: true
+          referencedColumnName: id
+  manyToMany:
+    nearby:
+      targetEntity: Province
+      mappedBy: nearby
+      joinTable:
+        name: bsrm_province_nearby
+        joinColumns:
+          name: item1:
+          referencedColumnName: id
+        inverseJoinColumns:
+          name: item2:
+          referencedColumnName: id
+  lifecycleCallbacks: {  }

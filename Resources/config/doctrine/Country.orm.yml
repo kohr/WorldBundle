@@ -1,0 +1,61 @@
+Brickstorm\WorldBundle\Entity\Country:
+  type: entity
+  table: b_world__country
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+    code:
+      type: string
+      length: 5
+      fixed: false
+      nullable: false
+    population:
+      type: integer
+      nullable: true
+    borders:
+      type: string
+      length: 250
+      nullable: true
+  oneToMany:
+    children:
+      targetEntity: Country
+      mappedBy: parent
+    nearby:
+      targetEntity: Country
+      mappedBy: nearby
+      joinTable:
+        name: bsrm_country_nearby
+        joinColumns:
+          name: item1:
+          referencedColumnName: id
+        inverseJoinColumns:
+          name: item2:
+          referencedColumnName: id
+  manyToOne:
+    parent:
+      targetEntity: Country
+      inversedBy: children  
+    continent:
+      targetEntity: Continent
+      inversedBy: country  
+  oneToOne:
+    capital:
+      targetEntity: City
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        capital_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

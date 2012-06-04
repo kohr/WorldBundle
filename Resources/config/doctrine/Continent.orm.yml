@@ -1,0 +1,28 @@
+Brickstorm\WorldBundle\Entity\Continent:
+  type: entity
+  table: b_world__continent
+  gedmo:
+    translation:
+      locale: locale
+# using specific personal translation class:
+#     entity: Translatable\Fixture\CategoryTranslation
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      gedmo:
+        - translatable
+  oneToMany:
+    country:
+      targetEntity: Country
+      mappedBy: continent
+  lifecycleCallbacks: {  }
