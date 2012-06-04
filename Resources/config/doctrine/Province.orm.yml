@@ -41,7 +41,7 @@ Brickstorm\WorldBundle\Entity\Province:
       targetEntity: Province
       mappedBy: nearby
       joinTable:
-        name: bsrm_province_nearby
+        name: b_world__nearby
         joinColumns:
           name: item1:
           referencedColumnName: id

@@ -34,7 +34,7 @@ Brickstorm\WorldBundle\Entity\Country:
       targetEntity: Country
       mappedBy: nearby
       joinTable:
-        name: bsrm_country_nearby
+        name: b_world__country_nearby
         joinColumns:
           name: item1:
           referencedColumnName: id
