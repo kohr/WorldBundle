@@ -17,22 +17,22 @@ services:
 
     #world
     brsm.world.admin.city:
-        class: Brickstorm\SolidRBundle\Admin\CityAdmin
+        class: Brickstorm\WorldBundle\Admin\CityAdmin
         tags: 
             - { name: sonata.admin, manager_type: orm, group: World, label: City }
-        arguments: [null, Brickstorm\SolidRBundle\Entity\City, BrickstormSolidRBundle:Admin\CityAdmin] 
+        arguments: [null, Brickstorm\WorldBundle\Entity\City, BrickstormWorldBundle:Admin\CityAdmin] 
     brsm.world.admin.province:
-        class: Brickstorm\SolidRBundle\Admin\ProvinceAdmin
+        class: Brickstorm\WorldBundle\Admin\ProvinceAdmin
         tags: 
             - { name: sonata.admin, manager_type: orm, group: World, label: Province }
-        arguments: [null, Brickstorm\SolidRBundle\Entity\Province, BrickstormSolidRBundle:Admin\ProvinceAdmin] 
+        arguments: [null, Brickstorm\WorldBundle\Entity\Province, BrickstormWorldBundle:Admin\ProvinceAdmin] 
     brsm.world.admin.country:
-        class: Brickstorm\SolidRBundle\Admin\CountryAdmin
+        class: Brickstorm\WorldBundle\Admin\CountryAdmin
         tags: 
             - { name: sonata.admin, manager_type: orm, group: World, label: Country }
-        arguments: [null, Brickstorm\SolidRBundle\Entity\Country, BrickstormSolidRBundle:Admin\CountryAdmin] 
+        arguments: [null, Brickstorm\WorldBundle\Entity\Country, BrickstormWorldBundle:Admin\CountryAdmin] 
     brsm.world.admin.continent:
-        class: Brickstorm\SolidRBundle\Admin\ContinentAdmin
+        class: Brickstorm\WorldBundle\Admin\ContinentAdmin
         tags: 
             - { name: sonata.admin, manager_type: orm, group: World, label: Continent }
-        arguments: [null, Brickstorm\SolidRBundle\Entity\Continent, BrickstormSolidRBundle:Admin\ContinentAdmin]  
+        arguments: [null, Brickstorm\WorldBundle\Entity\Continent, BrickstormWorldBundle:Admin\ContinentAdmin]  
