@@ -31,6 +31,10 @@ class CountryAdmin extends Admin
             ->with('Continent')
               ->add('continent', 'sonata_type_model')
             ->end()
+            ->with('Datas')
+                ->add('population', null, array('required' => false))
+                ->add('devise', null, array('required' => false))
+            ->end()
         ;
     }
 }

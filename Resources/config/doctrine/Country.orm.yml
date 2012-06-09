@@ -17,8 +17,10 @@ Brickstorm\WorldBundle\Entity\Country:
     code:
       type: string
       length: 5
-      fixed: false
-      nullable: false
+    devise:
+      type: string
+      length: 5
+      nullable: true
     population:
       type: integer
       nullable: true

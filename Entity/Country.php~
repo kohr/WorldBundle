@@ -253,29 +253,4 @@ class Country
     {
         return $this->continent;
     }
-    /**
-     * @var string $devise
-     */
-    private $devise;
-
-
-    /**
-     * Set devise
-     *
-     * @param string $devise
-     */
-    public function setDevise($devise)
-    {
-        $this->devise = $devise;
-    }
-
-    /**
-     * Get devise
-     *
-     * @return string 
-     */
-    public function getDevise()
-    {
-        return $this->devise;
-    }
 }
