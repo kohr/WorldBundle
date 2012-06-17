@@ -31,6 +31,8 @@ class CityAdmin extends Admin
                 ->add('province', 'sonata_type_model')
             ->end()
             ->with('Datas')
+                ->add('latitude', null, array('required' => false))
+                ->add('longitude', null, array('required' => false))
                 ->add('population', null, array('required' => false))
             ->end()
         ;
