@@ -4,8 +4,6 @@ Brickstorm\WorldBundle\Entity\Continent:
   gedmo:
     translation:
       locale: locale
-# using specific personal translation class:
-#     entity: Translatable\Fixture\CategoryTranslation
   fields:
     id:
       id: true

@@ -1,0 +1,14 @@
+<?php
+
+namespace Brickstorm\WorldBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Brickstorm\WorldBundle\Entity\LocationType
+ */
+class LocationType
+{
+    protected $locale;
+
+}

@@ -1,0 +1,19 @@
+Brickstorm\WorldBundle\Entity\LocationType:
+  type: entity
+  table: b_world__location_type
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 250
+  oneToMany:
+    locations:
+      targetEntity: Location
+      mappedBy: type
+  lifecycleCallbacks: {  }
