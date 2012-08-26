@@ -36,3 +36,13 @@ services:
         tags: 
             - { name: sonata.admin, manager_type: orm, group: World, label: Continent }
         arguments: [null, Brickstorm\WorldBundle\Entity\Continent, BrickstormWorldBundle:Admin\ContinentAdmin]  
+    brsm.world.admin.location:
+        class: Brickstorm\WorldBundle\Admin\LocationAdmin
+        tags: 
+            - { name: sonata.admin, manager_type: orm, group: World, label: Location }
+        arguments: [null, Brickstorm\WorldBundle\Entity\Location, BrickstormWorldBundle:Admin\LocationAdmin] 
+    brsm.world.admin.locationtype:
+        class: Brickstorm\WorldBundle\Admin\LocationTypeAdmin
+        tags: 
+            - { name: sonata.admin, manager_type: orm, group: World, label: Location }
+        arguments: [null, Brickstorm\WorldBundle\Entity\LocationType, BrickstormWorldBundle:Admin\LocationTypeAdmin] 

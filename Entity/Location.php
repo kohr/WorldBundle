@@ -305,4 +305,29 @@ class Location
     {
         return $this->type;
     }
+    /**
+     * @var Application\Sonata\UserBundle\Entity\User
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param Application\Sonata\UserBundle\Entity\User $user
+     */
+    public function setUser(\Application\Sonata\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Application\Sonata\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

@@ -63,4 +63,11 @@ Brickstorm\WorldBundle\Entity\Location:
         type_id:
           referencedColumnName: id
       orphanRemoval: false
+    user:
+      targetEntity: \Application\Sonata\UserBundle\Entity\User
+      inversedBy: locations  
+      joinColumns:
+        user_id:
+          nullable: true
+          referencedColumnName: id
   lifecycleCallbacks: {  }
