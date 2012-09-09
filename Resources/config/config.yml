@@ -44,5 +44,5 @@ services:
     brsm.world.admin.locationtype:
         class: Brickstorm\WorldBundle\Admin\LocationTypeAdmin
         tags: 
-            - { name: sonata.admin, manager_type: orm, group: World, label: Location }
+            - { name: sonata.admin, manager_type: orm, group: World, label: LocationType }
         arguments: [null, Brickstorm\WorldBundle\Entity\LocationType, BrickstormWorldBundle:Admin\LocationTypeAdmin] 
